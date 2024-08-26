@@ -1,4 +1,5 @@
 {
+  "homepage": "https://venkata-hari.github.io/Janmashtami_wishes",
   "name": "my-react",
   "version": "0.1.0",
   "private": true,
@@ -6,14 +7,19 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "gh-pages": "^6.1.1",
+    "react": "19.0.0-rc-f38c22b244-20240704",
+    "react-audio-player": "^0.17.0",
+    "react-dom": "19.0.0-rc-f38c22b244-20240704",
     "react-scripts": "5.0.1",
+    "react-share": "^5.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
