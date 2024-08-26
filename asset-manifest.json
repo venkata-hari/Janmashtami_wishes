@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Janmashtami_wishes/static/css/main.f820bba3.css",
-    "main.js": "/Janmashtami_wishes/static/js/main.ae62ad56.js",
+    "main.js": "/Janmashtami_wishes/static/js/main.abd1914a.js",
     "static/js/453.e7e9f32a.chunk.js": "/Janmashtami_wishes/static/js/453.e7e9f32a.chunk.js",
     "static/media/song.mp3": "/Janmashtami_wishes/static/media/song.219658793cd8b039fa62.mp3",
     "static/media/5.png": "/Janmashtami_wishes/static/media/5.ad405aefb6b5c41e9a48.png",
@@ -12,11 +12,11 @@
     "static/media/share.png": "/Janmashtami_wishes/static/media/share.f59ae9ac17725a863566.png",
     "index.html": "/Janmashtami_wishes/index.html",
     "main.f820bba3.css.map": "/Janmashtami_wishes/static/css/main.f820bba3.css.map",
-    "main.ae62ad56.js.map": "/Janmashtami_wishes/static/js/main.ae62ad56.js.map",
+    "main.abd1914a.js.map": "/Janmashtami_wishes/static/js/main.abd1914a.js.map",
     "453.e7e9f32a.chunk.js.map": "/Janmashtami_wishes/static/js/453.e7e9f32a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f820bba3.css",
-    "static/js/main.ae62ad56.js"
+    "static/js/main.abd1914a.js"
   ]
 }
