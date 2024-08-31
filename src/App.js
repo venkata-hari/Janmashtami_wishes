@@ -4,10 +4,10 @@ import KrishnaImage_Two from './Assets/2.png';
 import KrishnaImage_Three from './Assets/3.png';
 import KrishnaImage_Four from './Assets/4.gif';
 import KrishnaImage_Five from './Assets/5.png';
-import Share from './Assets/share.png'
+import Share from './Assets/share.png';
 import ShareButtons from './ShareButtons';
+import Audio from './Assets/song.mp3'
 import ReactAudioPlayer from 'react-audio-player'; 
-import audio from './Assets/song.mp3'
 import './App.css';
 
 const data = [
@@ -21,9 +21,10 @@ function App() {
   const [index, setIndex] = useState(0);
   const [value, setValue] = useState(true);
   const [name, setName] = useState('');
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(true);
   const canvasRef = useRef(null);
- 
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex(prevIndex => (prevIndex + 1) % data.length);
@@ -78,6 +79,8 @@ function App() {
     }
   }, []);
 
+
+
   const handleCreate = (e) => {
     e.preventDefault();
     setValue(!value);
@@ -98,23 +101,25 @@ function App() {
           </form>
         </div>
         : <div className='root'>
+          <ReactAudioPlayer src={Audio} autoPlay loop/>
           <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} style={{ position: 'absolute', zIndex: 900 }}></canvas>
-          <ReactAudioPlayer src={audio} autoPlay loop/>
-          <div className='share_icon' style={{ marginBottom: !display ? '10%' : '1%' }}>
-            {!display && <ShareButtons />}
+          <div className='share_Btns'>
+          {!display && <ShareButtons />}
+          </div>
+          <div className='share_icon'>
             <img src={Share} alt='' style={{ width: '40px', cursor: 'pointer' }} onClick={() => setDisplay(!display)} />
           </div>
           <h1 className='name'>{name}</h1>
           <img src={KrishnaImage_One} alt='' className='krishnaimage' />
           <figure>
-            <img src={data[index].img} alt='' style={{ width: '200px', height: '200px' }} />
+            <img src={data[index].img} alt='' style={{ width: '180px', height: '180px' }} />
           </figure>
-          <h2 style={{ color: 'white', width: '60%', textAlign: 'center' }}>
+          <h3 style={{ color: 'white', width: '60%', textAlign: 'center' }}>
             May Lord Krishna always shower his blessings on you.
             And may every year Janmashtami bring lots of happiness for you and your family.
             Wishing you a very Happy Janmashtami
-          </h2>
-
+          </h3>
+          
         </div>}
     </Fragment>
   );
